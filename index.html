@@ -3,17 +3,26 @@
 
   <head>
     <title>Asteroids</title>
-
+    <!-- <script src="vendor/jquery-2.1.3.min.js"></script> -->
     <style>
       html, body, canvas {
         padding: 0px;
         margin: 0px;
+        background-size: cover;
+        overflow: hidden;
+
       }
     </style>
   </head>
 
   <body>
-    <canvas id="game-canvas"></canvas>
+    <!-- <form>
+
+      <button class="start-game">Start Asteroids</button>
+    </form> -->
+    <canvas id="game-canvas">
+
+    </canvas>
     <script src="lib/keymaster.js"></script>
     <script src="lib/utils.js"></script>
     <script src="lib/movingObject.js"></script>
@@ -26,13 +35,19 @@
 
     <script>
       var canvasEl = document.getElementById("game-canvas");
-      canvasEl.height = 600;
-      canvasEl.width = 1200;
+      canvasEl.height = window.innerHeight;
+      canvasEl.width = window.innerWidth;
       var ctx = canvasEl.getContext('2d');
+      var game = new Asteroids.Game(ctx);
+      // $('form').submit(function (event) {
+      //   event.preventDefault();
 
-      var game = new Asteroids.Game();
-      var gameView = new Asteroids.GameView(game, ctx);
-      gameView.start();
+
+        var gameView = new Asteroids.GameView(game, ctx);
+        gameView.start();
+        // $('form').hide();
+      // });
+
     </script>
 
 
