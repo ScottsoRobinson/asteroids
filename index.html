@@ -8,9 +8,10 @@
       html, body, canvas {
         padding: 0px;
         margin: 0px;
-        position: fixed;
+        display: block;
         background-size: cover;
         overflow: hidden;
+
 
       }
       span{
@@ -103,7 +104,7 @@
       var game = new Asteroids.Game(ctx);
       key('enter', function(){
         $('div').hide();
-        $('canvas').show();
+        $('canvas').toggleClass('hidden');
         var gameView = new Asteroids.GameView(game, ctx);
         gameView.start();
         key.unbind('enter');
