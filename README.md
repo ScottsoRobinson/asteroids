@@ -1,1 +1,28 @@
-This version of asteroids was written in javascript. It has similar functionality to the traditional game, the asteroids break up into smaller pieces when shot and will eventually be destroyed in their smallest size. It is essentially an exercise in combining some different aspects of physics (constant speed bullets, max speed for the ship and asteroids no matter the direction of the vectors -- the speeds are normalized, etc.) into a javascript browser game.
+#asteroids.js
+A browser based version of the classic arcade game.
+
+
+### [Live Link](http://scottsorobinson.github.io/asteroids)
+
+## Instructions
+
+* Use arrow keys to move around, down slows down the ship
+* Spacebar to fire
+* Enter will restart the game after running out of lives
+
+## Features
+
+* Game has levels with increasing difficulty (more asteroids)
+* Keeps track of and displays points, lives, and level
+
+## Technical Details
+
+* Written in JavaScript, using HTML5 Canvas API
+* Implements an `inherits` function to allow for inheritance design pattern
+* Uses JavaScript's `Math` object to use vector algebra to calculate ship and bullet movement and trigonometry to calculate ship rotation
+
+
+## Future Features
+
+* Store high scores and have a high score listing
+* Develop an enemy ship that will attack player ship
